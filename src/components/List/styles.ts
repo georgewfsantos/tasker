@@ -29,7 +29,7 @@ export const Container = styled.div<ContainerProps>`
     button {
       width: 2.62rem;
       height: 2.62rem;
-      background: #7b5fd9;
+      background: #ff5a59;
       border-radius: 1.12rem;
       border: 0;
       cursor: pointer;

@@ -19,9 +19,10 @@ interface ListProps {
     cards: CardObject[];
     done?: boolean;
   };
+  listIndex: number;
 }
 
-const List: React.FC<ListProps> = ({ list }) => {
+const List: React.FC<ListProps> = ({ list, listIndex }) => {
   return (
     <Container done={list.done}>
       <header>
@@ -34,8 +35,8 @@ const List: React.FC<ListProps> = ({ list }) => {
       </header>
 
       <ul>
-        {list.cards.map((card) => (
-          <Card key={card.id} card={card} />
+        {list.cards.map((card, index) => (
+          <Card key={card.id} card={card} index={index} listIndex={listIndex} />
         ))}
       </ul>
     </Container>
