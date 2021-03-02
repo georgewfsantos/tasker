@@ -6,37 +6,35 @@ export const loadLists = () => {
       cards: [
         {
           id: 1,
-          content: "Estudar módulo 01 de NodeJS",
+          content: "Just an example content to fill the card",
           labels: ["#7159c1"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
         },
         {
           id: 2,
-          content:
-            "Criar vídeo para o Youtube ensinando a recriar a interface do Pipefy",
+          content: "Just an example content to fill the card",
           labels: ["#7159c1"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
         },
         {
           id: 3,
-          content: "Estudar módulo 03 de React Native",
+          content: "Just an example content to fill the card",
           labels: ["#7159c1"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
         },
         {
           id: 4,
-          content:
-            'Gravar Aula "NextJS: Utilizando server-side rendering com ReactJS"',
+          content: 'Just an example content to fill the card"',
           labels: ["#54e1f7"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
         },
         {
           id: 5,
-          content: "Gravar testes e deploy ReactJS",
+          content: "Just an example content to fill the card",
           labels: ["#54e1f7"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
@@ -49,7 +47,7 @@ export const loadLists = () => {
       cards: [
         {
           id: 6,
-          content: "Recriando clone do Pipefy",
+          content: "Just an example content to fill the card",
           labels: [],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
@@ -62,21 +60,21 @@ export const loadLists = () => {
       cards: [
         {
           id: 7,
-          content: "Gravar sobre Geolocalização e mapas com React Native",
+          content: "Just an example content to fill the card",
           labels: ["#7159c1"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
         },
         {
           id: 8,
-          content: "Gravar testes e deploy ReactJS",
+          content: "Just an example content to fill the card",
           labels: ["#54e1f7"],
           user:
             "https://avatars.githubusercontent.com/u/33661312?s=460&u=a140ec4f9f80ce1bcbcbf4229ad38c83da447040&v=4",
         },
         {
           id: 9,
-          content: "Ajustes na biblioteca unform",
+          content: "Just an example content to fill the card",
           labels: [],
         },
       ],
@@ -88,12 +86,12 @@ export const loadLists = () => {
       cards: [
         {
           id: 10,
-          content: "Gravar aula sobre deploy e CI com React Native",
+          content: "Just an example content to fill the card",
           labels: [],
         },
         {
           id: 12,
-          content: "Gravar testes e deploy ReactJS",
+          content: "Just an example content to fill the card",
           labels: ["#54e1f7"],
         },
         {
