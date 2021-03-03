@@ -9,8 +9,8 @@ export const Container = styled.div<ContainerProps>`
   border: 0.12rem solid #d5d5d5;
   margin-bottom: 0.62rem;
   padding: 0.94rem;
-  box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.2),
-    0 1px 6px 0 rgba(255, 255, 255, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
   cursor: grab;
 
   header {

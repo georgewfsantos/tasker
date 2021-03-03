@@ -1,7 +1,7 @@
 export const loadLists = () => {
   return [
     {
-      title: "Tarefas",
+      title: "Tasks",
       creatable: true,
       cards: [
         {
@@ -42,7 +42,7 @@ export const loadLists = () => {
       ],
     },
     {
-      title: "Fazendo",
+      title: "In Progress",
       creatable: false,
       cards: [
         {
@@ -55,7 +55,7 @@ export const loadLists = () => {
       ],
     },
     {
-      title: "Pausado",
+      title: "Waiting",
       creatable: false,
       cards: [
         {
@@ -80,7 +80,7 @@ export const loadLists = () => {
       ],
     },
     {
-      title: "Concluído",
+      title: "Done",
       creatable: false,
       done: true,
       cards: [

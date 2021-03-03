@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import produce from "immer";
 
 import { loadLists } from "../../services/api";
@@ -18,8 +18,10 @@ export interface ListObject {
 }
 
 const Board: React.FC = () => {
-  const [lists, setLists] = useState<ListObject[]>(listsArray);
-  console.log(listsArray);
+  const [lists, setLists] = useState<ListObject[]>(() => {
+    const storedList = localStorage.getItem("@lists");
+    return storedList ? JSON.parse(storedList) : listsArray;
+  });
 
   const moveItem = (
     fromListIndex: number,
@@ -37,6 +39,8 @@ const Board: React.FC = () => {
         draft[targetListIndex].cards.splice(to, 0, draggedItem);
       })
     );
+
+    localStorage.setItem("@lists", JSON.stringify(lists));
   };
 
   return (
