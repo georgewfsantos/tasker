@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
 import produce from "immer";
-
-import { loadLists } from "../../services/api";
+import React, { useState } from "react";
 import BoardContext from "../../context/boardContex";
-
-import { Container } from "./styles";
-
+import { loadLists } from "../../services/api";
 import List, { CardObject } from "../List";
+import Modal from "../Modal";
+import { Container } from "./styles";
 
 const listsArray = loadLists();
 
@@ -22,6 +20,7 @@ const Board: React.FC = () => {
     const storedList = localStorage.getItem("@lists");
     return storedList ? JSON.parse(storedList) : listsArray;
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const moveItem = (
     fromListIndex: number,
@@ -29,8 +28,6 @@ const Board: React.FC = () => {
     from: number,
     to: number
   ) => {
-    console.log(from, to);
-
     setLists(
       produce(lists, (draft) => {
         const draggedItem = draft[fromListIndex].cards[from];
@@ -43,13 +40,20 @@ const Board: React.FC = () => {
     localStorage.setItem("@lists", JSON.stringify(lists));
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <BoardContext.Provider value={{ lists, moveItem }}>
+    <BoardContext.Provider
+      value={{ lists, setLists, moveItem, closeModal, setIsModalOpen }}
+    >
       <Container>
         {lists.map((list: ListObject, index) => (
           <List key={list.title} list={list} listIndex={index} />
         ))}
       </Container>
+      {isModalOpen && <Modal />}
     </BoardContext.Provider>
   );
 };

@@ -9,6 +9,9 @@ interface BoardContextData {
     from: number,
     to: number
   ) => void;
+  closeModal: () => void;
+  setLists: React.Dispatch<React.SetStateAction<ListObject[]>>;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const BoardContext = createContext({} as BoardContextData);

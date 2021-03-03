@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdAdd } from "react-icons/md";
+import BoardContext from "../../context/boardContex";
 
 import Card from "../Card";
 
@@ -23,12 +24,18 @@ interface ListProps {
 }
 
 const List: React.FC<ListProps> = ({ list, listIndex }) => {
+  const { setIsModalOpen } = useContext(BoardContext);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
   return (
     <Container done={list.done}>
       <header>
         <h2>{list.title}</h2>
         {list.creatable && (
-          <button type="button">
+          <button type="button" onClick={openModal}>
             <MdAdd size={24} color="#fff" />
           </button>
         )}
