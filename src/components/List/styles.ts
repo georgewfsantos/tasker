@@ -11,7 +11,8 @@ export const Container = styled.div<ContainerProps>`
   opacity: ${(props) => (props.done ? 0.4 : 1)};
 
   & + div {
-    border-left: 0.062rem solid rgba(255, 255, 255, 0.05);
+    /* border-left: 0.062rem solid rgba(255, 255, 255, 0.05); */
+    border-left: 0.062rem solid rgba(255, 90, 89, 0.2);
   }
 
   header {
